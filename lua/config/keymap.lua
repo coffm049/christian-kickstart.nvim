@@ -219,8 +219,10 @@ wk.register(
     },
     g = {
       name = "git",
+      
       c = { ":GitConflictRefresh<cr>", 'conflict' },
-      g = { ":Neogit<cr>", "neogit" },
+
+      g = { ":Git<cr>", "neogit" },
       s = { ":Gitsigns<cr>", "gitsigns" },
       pl = { ":Octo pr list<cr>", "gh pr list" },
       pr = { ":Octo review start<cr>", "gh pr review" },

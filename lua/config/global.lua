@@ -4,6 +4,7 @@ vim.opt.termguicolors = true
 
 -- more opinionated
 vim.opt.number = true                  -- show linenumbers
+vim.opt.relativenumber = true          -- show relative linenumbers
 vim.opt.mouse = 'a'                    -- enable mouse
 vim.opt.mousefocus = true
 vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
@@ -16,7 +17,7 @@ vim.opt.updatetime = 250               -- for autocommands and hovers
 vim.opt.shortmess:append 'A'
 
 -- use spaces as tabs
-local tabsize = 2
+local tabsize = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize

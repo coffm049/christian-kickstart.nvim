@@ -1,19 +1,13 @@
 return {
   -- git and projects
   { 'sindrets/diffview.nvim' },
-  {
-    'NeogitOrg/neogit',
-    lazy = true,
-    cmd = 'Neogit',
-    config = function()
-      require('neogit').setup {
-        disable_commit_confirmation = true,
-        integrations = {
-          diffview = true
-        }
-      }
-    end
-  },
+  -- Git related plugins
+  { 'tpope/vim-fugitive' },
+  'tpope/vim-rhubarb',
+
+  -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth',
+  
   {
     'lewis6991/gitsigns.nvim',
     config = function()
@@ -36,13 +30,6 @@ return {
       { ']x', ':GitConflictNextConflict<cr>' },
       { '[x', ':GitConflictPrevConflict<cr>' },
     },
-  },
-  {
-    'f-person/git-blame.nvim',
-    init = function()
-      vim.g.gitblame_display_virtual_text = 1
-      vim.g.gitblame_enabled = 0
-    end
   },
   -- github PRs and the like with gh-cli
   -- { 'pwntester/octo.nvim', config = function()

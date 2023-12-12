@@ -86,48 +86,6 @@ return {
     end
   },
 
-  {
-    'nanozuki/tabby.nvim',
-    config = function()
-      require 'tabby.tabline'.use_preset('tab_only')
-    end
-  },
-
-  -- {
-  --   'dstein64/nvim-scrollview',
-  --   config = function()
-  --     require('scrollview').setup({
-  --       current_only = true,
-  --     })
-  --   end
-  -- },
-
-  -- { 'RRethy/vim-illuminate' }, -- highlight current word
-
-  -- filetree
-  {
-    'nvim-tree/nvim-tree.lua',
-    keys = {
-      { '<c-b>', ':NvimTreeToggle<cr>' },
-    },
-    config = function()
-      require 'nvim-tree'.setup {
-        disable_netrw       = true,
-        update_focused_file = {
-          enable = true,
-        },
-        git                 = {
-          enable = true,
-          ignore = false,
-          timeout = 500,
-        },
-        diagnostics         = {
-          enable = true,
-        },
-      }
-    end
-  },
-  -- show keybinding help window
   { 'folke/which-key.nvim' },
 
   {
@@ -141,17 +99,6 @@ return {
     end
   },
 
-  -- terminal
-  {
-    "akinsho/toggleterm.nvim",
-    version = '*',
-    config = function()
-      require("toggleterm").setup {
-        open_mapping = [[<c-\>]],
-        direction = 'float',
-      }
-    end
-  },
   -- show diagnostics list
   {
     "folke/trouble.nvim",

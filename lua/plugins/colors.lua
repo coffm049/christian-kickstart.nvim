@@ -1,15 +1,8 @@
 return {
-  { 'shaunsingh/nord.nvim' },
-  { 'folke/tokyonight.nvim' },
-  { 'EdenEast/nightfox.nvim' },
   {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-  },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000
   },
 
   -- color html colors
@@ -18,13 +11,12 @@ return {
     config = function()
       require 'colorizer'.setup {
         css = { css_fn = true, css = true },
-        'javascript',
         'html',
         'r',
         'rmd',
         'qmd',
         'markdown',
-        'python'
+        'python',
       }
     end
   },
