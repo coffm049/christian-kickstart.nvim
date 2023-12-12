@@ -407,7 +407,10 @@ return {
       {
         'L3MON4D3/LuaSnip',
         version = nil,
-        branch = 'master'
+        branch = 'master',
+        dependencies = {
+          { 'rafamadriz/friendly-snippets' },
+        },
       },
       { 'rafamadriz/friendly-snippets' },
       { 'onsails/lspkind-nvim' },

@@ -108,6 +108,7 @@ end
 --show up in the popup as well
 wk.register(
   {
+    x = { '(v)<Plug>SlimeRegionSend<cr>', 'Execute line/function'},
     c = {
       name = 'code',
       c = { ':SlimeConfig<cr>', 'slime config' },
@@ -159,6 +160,9 @@ wk.register(
       ['j'] = { 'o```{julia}<cr>```<esc>O', "julia code chunk" },
       ['l'] = { 'o```{julia}<cr>```<esc>O', "julia code chunk" },
     },
+    d = {
+      name = 'debug',
+    },
     q = {
       name = 'quarto',
       a = { ":QuartoActivate<cr>", 'activate' },
@@ -179,7 +183,7 @@ wk.register(
       h = { '<cmd>Telescope help_tags<cr>', 'help' },
       k = { '<cmd>Telescope keymaps<cr>', 'keymaps' },
       r = { '<cmd>Telescope lsp_references<cr>', 'references' },
-      g = { "<cmd>Telescope live_grep<cr>", "grep" },
+      g = { "<cmd>Telescope live_grep<cr>", "rip grep live" },
       b = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "fuzzy" },
       m = { "<cmd>Telescope marks<cr>", "marks" },
       M = { "<cmd>Telescope man_pages<cr>", "man pages" },
@@ -222,11 +226,11 @@ wk.register(
       
       c = { ":GitConflictRefresh<cr>", 'conflict' },
 
-      g = { ":Git<cr>", "neogit" },
-      s = { ":Gitsigns<cr>", "gitsigns" },
-      pl = { ":Octo pr list<cr>", "gh pr list" },
-      pr = { ":Octo review start<cr>", "gh pr review" },
-      wc = { ":lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>", "worktree create" },
+      g = { ":Git<cr>", "Fu[g]itive" },
+      s = { ":Gitsigns<cr>", "git[s]igns" },
+      pl = { ":Octo pr list<cr>", "gh [p]r [l]ist" },
+      pr = { ":Octo review start<cr>", "gh [p]r [r]eview" },
+      wc = { ":lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>", "[w]orktree [c]reate" },
       ws = { ":lua require('telescope').extensions.git_worktree.git_worktrees()<cr>", "worktree switch" },
       d = {
         name = 'diff',
@@ -239,10 +243,6 @@ wk.register(
         o = { ':GitBlameOpenCommitURL<cr>', 'open' },
         c = { ':GitBlameCopyCommitURL<cr>', 'copy' },
       }
-    },
-    w = {
-      name = 'write',
-      w = { ":w<cr>", "write" },
     },
     x = {
       name = 'execute',
